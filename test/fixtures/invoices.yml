@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_date: 2023-10-12
+  cliente: MyString
+  ruc: MyString
+  cond_venta: false
+  valor_parcial: 9.99
+  total_pagar: 9.99
+  t_pagar_c: MyString
+  iva_five: 9.99
+  iva_ten: 9.99
+  iva_total: 9.99
+  telefono: MyString
+  nota_remi: MyString
+
+two:
+  event_date: 2023-10-12
+  cliente: MyString
+  ruc: MyString
+  cond_venta: false
+  valor_parcial: 9.99
+  total_pagar: 9.99
+  t_pagar_c: MyString
+  iva_five: 9.99
+  iva_ten: 9.99
+  iva_total: 9.99
+  telefono: MyString
+  nota_remi: MyString

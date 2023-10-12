@@ -1,0 +1,77 @@
+<%= form_with(model: invoice) do |form| %>
+  <% if invoice.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(invoice.errors.count, "error") %> prohibited this invoice from being saved:</h2>
+
+      <ul>
+        <% invoice.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :event_date, style: "display: block" %>
+    <%= form.date_field :event_date %>
+  </div>
+
+  <div>
+    <%= form.label :cliente, style: "display: block" %>
+    <%= form.text_field :cliente %>
+  </div>
+
+  <div>
+    <%= form.label :ruc, style: "display: block" %>
+    <%= form.text_field :ruc %>
+  </div>
+
+  <div>
+    <%= form.label :cond_venta, style: "display: block" %>
+    <%= form.check_box :cond_venta %>
+  </div>
+
+  <div>
+    <%= form.label :valor_parcial, style: "display: block" %>
+    <%= form.text_field :valor_parcial %>
+  </div>
+
+  <div>
+    <%= form.label :total_pagar, style: "display: block" %>
+    <%= form.text_field :total_pagar %>
+  </div>
+
+  <div>
+    <%= form.label :t_pagar_c, style: "display: block" %>
+    <%= form.text_field :t_pagar_c %>
+  </div>
+
+  <div>
+    <%= form.label :iva_five, style: "display: block" %>
+    <%= form.text_field :iva_five %>
+  </div>
+
+  <div>
+    <%= form.label :iva_ten, style: "display: block" %>
+    <%= form.text_field :iva_ten %>
+  </div>
+
+  <div>
+    <%= form.label :iva_total, style: "display: block" %>
+    <%= form.text_field :iva_total %>
+  </div>
+
+  <div>
+    <%= form.label :telefono, style: "display: block" %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div>
+    <%= form.label :nota_remi, style: "display: block" %>
+    <%= form.text_field :nota_remi %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

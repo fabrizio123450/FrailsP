@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  producto: MyString
+  cantidad: 1
+  precio: 9.99
+  iva_ten: 9.99
+  iva_five: 9.99
+
+two:
+  producto: MyString
+  cantidad: 1
+  precio: 9.99
+  iva_ten: 9.99
+  iva_five: 9.99
