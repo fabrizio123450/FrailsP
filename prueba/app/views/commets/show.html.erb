@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @commet %>
+
+<div>
+  <%= link_to "Edit this commet", edit_commet_path(@commet) %> |
+  <%= link_to "Back to commets", commets_path %>
+
+  <%= button_to "Destroy this commet", @commet, method: :delete %>
+</div>

@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Empleados</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Direccion</th>
+      <th>Telefono</th>
+      <th>Fecha de Entrada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empleados.each do |empleado| %>
+      <tr>
+        <td><%= empleado.Nombre %></td>
+        <td><%= empleado.direccion %></td>
+        <td><%= empleado.telefono %></td>
+        <td><%= empleado.fechadeEntrada%></td>
+        <td><%= link_to "Show this empleado", empleado %></td>
+     </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= link_to "New empleado", new_empleado_path %>

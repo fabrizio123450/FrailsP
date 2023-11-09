@@ -1,0 +1,62 @@
+<%= form_with(model: bill_v2) do |form| %>
+  <% if bill_v2.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(bill_v2.errors.count, "error") %> prohibited this bill_v2 from being saved:</h2>
+
+      <ul>
+        <% bill_v2.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :event_date, style: "display: block" %>
+    <%= form.date_field :event_date %>
+  </div>
+
+  <div>
+    <%= form.label :cliente, style: "display: block" %>
+    <%= form.text_field :cliente %>
+  </div>
+
+  <div>
+    <%= form.label :ruc, style: "display: block" %>
+    <%= form.text_field :ruc %>
+  </div>
+
+  <div>
+    <%= form.label :cond_venta, style: "display: block" %>
+    <%= form.check_box :cond_venta %>
+  </div>
+
+  <div>
+    <%= form.label :valor_parcial, style: "display: block" %>
+    <%= form.text_field :valor_parcial %>
+  </div>
+
+  <div>
+    <%= form.label :total_pagar, style: "display: block" %>
+    <%= form.text_field :total_pagar %>
+  </div>
+
+  <div>
+    <%= form.label :iva, style: "display: block" %>
+    <%= form.text_field :iva %>
+  </div>
+
+  <div>
+    <%= form.label :telefono, style: "display: block" %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div>
+    <%= form.label :nota_remi, style: "display: block" %>
+    <%= form.text_field :nota_remi %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

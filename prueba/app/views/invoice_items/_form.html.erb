@@ -1,0 +1,94 @@
+
+  
+
+  <!-- app/views/invoice_items/_form.html.erb -->
+
+<%= form_with(model: invoice_item, local: true) do |form| %>
+<% if invoice_item.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(invoice_item.errors.count, "error") %> prohibited this invoice_item from being saved:</h2>
+
+      <ul>
+        <% invoice_item.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= form.label :name, 'Nombre del Elemento' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :description, 'Descripción' %>
+    <%= form.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :quantity, 'Cantidad' %>
+    <%= form.number_field :quantity, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :unit_price, 'Precio Unitario' %>
+    <%= form.text_field :unit_price, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :invoice_id, style: "display: block" %>
+    <%= form.text_field :invoice_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Guardar', class: 'btn btn-primary' %>
+    <%= link_to 'Cancelar', invoice_items_path, class: 'btn btn-secondary' %>
+  </div>
+<% end %>
+
+
+<style>
+/* app/assets/stylesheets/invoice_items.scss */
+
+/* Estilo para el formulario y sus elementos */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Estilo para etiquetas de formulario */
+.form-group label {
+  font-weight: bold;
+  display: block;
+}
+
+/* Estilo para campos de entrada de formulario */
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+/* Estilo para botones de formulario */
+.actions {
+  margin-top: 20px;
+}
+
+.actions input[type="submit"],
+.actions a.btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.actions a.btn.btn-secondary {
+  background-color: #ccc;
+  margin-left: 10px;
+}
+
+
+</style>

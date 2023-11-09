@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cant: 1
+  producto: MyString
+  precio: 9.99
+  v_venta: 9.99
+
+two:
+  cant: 1
+  producto: MyString
+  precio: 9.99
+  v_venta: 9.99

@@ -1,0 +1,108 @@
+/* Estilo para la tabla que muestra los elementos de factura */
+.invoice-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para las filas de la tabla */
+  .invoice-items-table tr {
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  .invoice-items-table td {
+    padding: 8px;
+  }
+  
+  /* Estilo para la cabecera de la tabla */
+  .invoice-items-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+    padding: 8px;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  /* Estilo para los enlaces o botones de acción (editar, eliminar, etc.) */
+  .invoice-action-links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Estilo para los botones de acción */
+  .invoice-action-links a.button {
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  /* Estilo para el botón de agregar nuevo elemento de factura */
+  .add-invoice-item-button {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .button-e{
+    padding: 5px 10px;
+    margin-right: 10px;
+    text-decoration: none;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333; /* Fondo del navbar */
+    color: #fff; /* Color del texto del navbar */
+    padding: 10px 0;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li:last-child {
+    margin-right: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff; /* Color de los enlaces en el navbar */
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}

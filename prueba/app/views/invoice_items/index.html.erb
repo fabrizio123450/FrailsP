@@ -1,0 +1,91 @@
+<!-- app/views/invoice_items/index.html.erb -->
+
+<h1>Elementos de Factura</h1>
+
+<%= link_to 'Agregar Elemento de Factura', new_invoice_item_path, class: 'add-invoice-item-button' %>
+
+<table class="invoice-items-table">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Descripción</th>
+      <th>Cantidad</th>
+      <th>Precio Unitario</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @invoice_items.each do |invoice_item| %>
+      <tr>
+        <td><%= invoice_item.name %></td>
+        <td><%= invoice_item.description %></td>
+        <td><%= invoice_item.quantity %></td>
+        <td><%= number_to_currency(invoice_item.unit_price) %></td>
+        <td class="invoice-action-links">
+          <%= link_to 'Editar', edit_invoice_item_path(invoice_item), class: 'button' %>
+          <%= link_to 'Eliminar', invoice_item, method: :delete, data: { confirm: '¿Estás seguro?' }, class: 'button' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<style>
+/* app/assets/stylesheets/invoice_items.scss */
+
+/* Estilo para la tabla que muestra los elementos de factura */
+.invoice-items-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Estilo para las filas de la tabla */
+.invoice-items-table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+/* Estilo para las celdas de la tabla */
+.invoice-items-table td {
+  padding: 8px;
+}
+
+/* Estilo para la cabecera de la tabla */
+.invoice-items-table th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Estilo para los enlaces o botones de acción (editar, eliminar, etc.) */
+.invoice-action-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Estilo para los botones de acción */
+.invoice-action-links a.button {
+  padding: 5px 10px;
+  margin-right: 10px;
+  text-decoration: none;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+/* Estilo para el botón de agregar nuevo elemento de factura */
+.add-invoice-item-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+</style>
