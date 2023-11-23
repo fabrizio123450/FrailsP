@@ -70,3 +70,6 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem "roo", "~> 2.10.0"
+gem 'roo-xls'

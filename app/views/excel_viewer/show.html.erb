@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Excel Viewer</title>
+</head>
+<body>
+  <h1>Contenido del Excel</h1>
+
+  <table border="1">
+    <% @excel_data.each do |row| %>
+      <tr>
+        <% row.each do |cell| %>
+          
+            <%if cell == "ACTIVO" %>
+              <td style="background-color: red;"><%= cell %></td>
+            <%elsif cell  == "PASIVO" %>
+              <td style="background-color: blue;"><%= cell %></td>
+            <%else%>
+              <td><%= cell %></td>
+            <%end%>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+</body>
+</html>
